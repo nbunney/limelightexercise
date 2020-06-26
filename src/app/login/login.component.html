@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="logo">Limelight FE Developer Test</div>
+  <div class="login-item">
+    <form action="" method="post" class="form form-login" [formGroup]="regForm">
+      <div class="form-field">
+        <label class="user" for="login-email"><span class="hidden">Email</span></label>
+        <input id="login-email" type="text" class="form-input" placeholder="email@domain.com" formControlName="email" required>
+      </div>
+
+      <div class="form-field">
+        <button (click)="attemptLogin()">Log In</button>
+      </div>
+    </form>
+  </div>
+</div>

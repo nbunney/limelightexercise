@@ -1,0 +1,9 @@
+<nav>
+  <h1>Limelight FE Developer Test</h1>
+
+  <rightSide>
+    <div *ngIf="isLoggedIn">
+    Welcome {{userName}}! | <a id="logoutButton" (click)="logout()">logout</a>
+    </div>
+  </rightSide>
+</nav>

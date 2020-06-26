@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "limelightplatform"
+    }
+  },
+  "defaultProject": "limelightplatform",
+  "cli": {
+    "analytics": "29de06b7-6788-4107-b751-c5c61447350e"
+  }
 }
