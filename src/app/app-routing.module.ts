@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from "./login/login.component";
-import {PostsComponent} from "./posts/posts.component";
+import { LoginComponent } from "./components/login/login.component";
+import {PostsComponent} from "./components/posts/posts.component";
 
 import { LoggedInGuard } from "./guards/logged-in.guard";
-import {DashboardComponent} from "./dashboard/dashboard.component";
+import {AlbumsComponent} from "./components/albums/albums.component";
+import {ToodsComponent} from "./components/toods/toods.component";
 
 const routes: Routes = [
   {
@@ -13,13 +14,18 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'dashboard',
-    component: DashboardComponent,
+    path: 'posts/:id',
+    component: PostsComponent,
     canActivate: [LoggedInGuard]
   },
   {
-    path: 'posts',
-    component: PostsComponent,
+    path: 'albums/:id',
+    component: AlbumsComponent,
+    canActivate: [LoggedInGuard]
+  },
+  {
+    path: 'todos/:id',
+    component: ToodsComponent,
     canActivate: [LoggedInGuard]
   }
 ];

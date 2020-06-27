@@ -1,0 +1,13 @@
+<nav>
+  <h1>Limelight FE Developer Test</h1>
+
+  <div id="links" *ngIf="isLoggedIn">
+    <a [routerLink]="['posts', user.id]">Posts</a>
+    <a [routerLink]="['albums', user.id]">Albums</a>
+    <a [routerLink]="['todos', user.id]">Todos</a>
+  </div>
+
+  <div id="rightSide" *ngIf="isLoggedIn">
+    <a href="http://{{user.website}}" target="_blank">{{user.name}}</a> ({{user.company.name}}) | <a id="logoutButton" (click)="logout()">logout</a>
+  </div>
+</nav>

@@ -1,0 +1,28 @@
+app-posts {
+  width: 100%;
+  max-width: 960px;
+}
+
+ul {
+  list-style: none;
+}
+
+.postList {
+  width: 100%;
+  padding-left: 0;
+}
+
+.postbox{
+  display: block;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+
+  .body {
+    padding: 10px 5px;
+
+    .indent {
+      margin-left: 15px;
+    }
+  }
+}

@@ -1,3 +1,9 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
 html, body, main {
   padding: 0;
   margin: 0;
@@ -22,4 +28,8 @@ main {
   min-height: 100%;
   color: #fff;
   background: transparent;
+}
+
+app-posts, app-albums, app-toods {
+  width: 80%;
 }

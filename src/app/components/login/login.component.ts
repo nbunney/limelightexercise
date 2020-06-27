@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { JSONPlaceholderService } from '../services/jsonplaceholder.service'
-import { user } from '../models/user.model'
+import { user } from '../../models/user.model'
 import { FormControl, FormGroup, FormBuilder } from "@angular/forms";
 import { Router } from "@angular/router";
-import { UserService } from "../services/user.service";
+
+import { UserService } from "../../services/user.service";
+import { JSONPlaceholderService } from '../../services/jsonplaceholder.service'
 
 @Component({
   selector: 'app-login',
@@ -34,10 +35,9 @@ export class LoginComponent implements OnInit {
     let formValue = this.regForm.getRawValue();
     if(formValue.email) {
       let user = this.Users.find( element => element.email === formValue.email.valueOf());
-      console.log(user);
-      if (user) {
+      if (user.id) {
         this.UserService.login(user);
-        this.router.navigate(['dashboard']);
+        this.router.navigate(['posts', user.id]);
       }
     }
   }

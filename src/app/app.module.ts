@@ -4,19 +4,21 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './login/login.component';
-import { PostsComponent } from './posts/posts.component'
+import { LoginComponent } from './components/login/login.component';
+import { PostsComponent } from './components/posts/posts.component'
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ToodsComponent } from './components/toods/toods.component';
+import { AlbumsComponent } from './components/albums/albums.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     PostsComponent,
-    DashboardComponent,
-    NavbarComponent
+    NavbarComponent,
+    ToodsComponent,
+    AlbumsComponent
   ],
   imports: [
     BrowserModule,
