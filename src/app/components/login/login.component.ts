@@ -22,7 +22,6 @@ export class LoginComponent implements OnInit {
 
   constructor(private JSONPlaceholder: JSONPlaceholderService,
               private UserService: UserService,
-              private formBuilder: FormBuilder,
               private router: Router) {
 
   }

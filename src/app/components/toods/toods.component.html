@@ -1,1 +1,13 @@
-<p>toods works!</p>
+<h2>Todos for {{currentUser.name}}</h2>
+<div id="sortArea">
+  <p-checkbox color="primary" isSwitch="true" (change)="changeComplete()" [checked]="showComplete">
+    Include Completed
+  </p-checkbox>
+</div>
+<ul id="postList" *ngIf="todos">
+  <li *ngFor="let todo of todos">
+    <p-checkbox color="primary" [checked]="todo.completed" *ngIf="showComplete || !todo.completed" disabled="disabled">
+      {{todo.title}}
+    </p-checkbox>
+  </li>
+</ul>

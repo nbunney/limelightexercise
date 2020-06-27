@@ -1,0 +1,52 @@
+#sortArea {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.sortZA:before {
+  content: '\f102';
+  font: 16px fontawesome;
+  color: white;
+  margin-left: 10px;
+}
+
+.sortAZ:before {
+  content: '\f103';
+  font: 16px fontawesome;
+  color: white;
+  margin-left: 10px;
+}
+
+#albumList {
+  display: block;
+  width: 40%;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+.albumItem {
+  margin-bottom: 10px;
+
+  a {
+    cursor: pointer;
+  }
+}
+
+.photoHolder {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+
+  img {
+    max-width: 100px;
+  }
+}
+
+h3 {
+  color: black;
+}

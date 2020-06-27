@@ -4,6 +4,7 @@ import {Observable} from "rxjs";
 import { user } from '../models/user.model'
 import { post, comment } from "../models/post.model";
 import { album, photo } from "../models/album.model";
+import {todo} from "../models/todo.model";
 
 @Injectable({
   providedIn: 'root'
@@ -35,5 +36,10 @@ export class JSONPlaceholderService {
   getPhotos(): Observable<photo[]> {
     const photourl = "https://jsonplaceholder.typicode.com/photos";
     return this.http.get<photo[]>(photourl);
+  }
+
+  getTodos(): Observable<todo[]> {
+    const todourl = "https://jsonplaceholder.typicode.com/todos";
+    return this.http.get<todo[]>(todourl);
   }
 }

@@ -1,1 +1,37 @@
-<p>albums works!</p>
+<h2>Albums</h2>
+<div id="sortArea">
+  <label>Sort:</label>
+  <label class="sortZA" (click)="sortAlbums(1)"></label>
+  <label class="sortAZ" (click)="sortAlbums(0)"></label>
+</div>
+<div id="albumList">
+  <ul *ngIf="albums">
+    <li class="albumItem" *ngFor="let album of albums">
+      {{album.title}} ({{album.photoCount}} Photos) <a (click)="setAlbum(album)">View Photos</a>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="showModal" class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex">
+  <div class="relative w-auto my-6 mx-auto max-w-6xl">
+    <!--content-->
+    <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+      <!--header-->
+      <div class="flex items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t">
+        <h3 class="text-3xl font-semibold">
+          Photos for {{currentAlbum.title}}
+        </h3>
+        <button class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" (click)="toggleModal()">
+          <span class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+            ×
+          </span>
+        </button>
+      </div>
+      <!--body-->
+      <div class="relative p-6 flex-auto photoHolder">
+        <img *ngFor="let photo of currentPhotos" [src]="photo.thumbnailUrl">
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="showModal" class="opacity-25 fixed inset-0 z-40 bg-black"></div>

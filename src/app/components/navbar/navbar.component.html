@@ -2,9 +2,9 @@
   <h1>Limelight FE Developer Test</h1>
 
   <div id="links" *ngIf="isLoggedIn">
-    <a [routerLink]="['posts', user.id]">Posts</a>
-    <a [routerLink]="['albums', user.id]">Albums</a>
-    <a [routerLink]="['todos', user.id]">Todos</a>
+    <a [routerLink]="['posts', user.id]" routerLinkActive="active">Posts</a>
+    <a [routerLink]="['albums', user.id]" routerLinkActive="active">Albums</a>
+    <a [routerLink]="['todos', user.id]" routerLinkActive="active">Todos</a>
   </div>
 
   <div id="rightSide" *ngIf="isLoggedIn">

@@ -11,6 +11,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ToodsComponent } from './components/toods/toods.component';
 import { AlbumsComponent } from './components/albums/albums.component';
 
+import { NgxPrettyCheckboxModule } from 'ngx-pretty-checkbox';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,8 @@ import { AlbumsComponent } from './components/albums/albums.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPrettyCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

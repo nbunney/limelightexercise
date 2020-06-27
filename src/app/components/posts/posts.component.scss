@@ -7,9 +7,22 @@ ul {
   list-style: none;
 }
 
-.postList {
+#postSearch {
+  background: black;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+#postList {
   width: 100%;
   padding-left: 0;
+}
+
+#searchArea {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .postbox{
@@ -20,9 +33,15 @@ ul {
 
   .body {
     padding: 10px 5px;
+    color: black;
+    background-color: white;
 
     .indent {
       margin-left: 15px;
+      margin-bottom: 10px;
+    }
+    hr {
+      padding: 10px 0;
     }
   }
 }
